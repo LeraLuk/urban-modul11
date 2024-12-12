@@ -7,9 +7,10 @@ wss.on("connection", (ws) => {
   ws.send(
     JSON.stringify({
       type: "system",
-      content: "welcome",
+      content: "Вы вошли в чат",
     })
   );
+
   ws.on("message", (message) => {
     let parseMessage;
     try {
